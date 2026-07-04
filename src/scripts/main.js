@@ -9,8 +9,8 @@ for (const item of pop) {
 
 const sum = values.reduce((acc, item) => acc + item, 0);
 
-document.body.querySelector('.total').textContent =
-  'Total: ' + sum.toLocaleString('en-US');
+document.body.querySelector('span.total-population').textContent =
+  sum.toLocaleString('en-US');
 
-document.body.querySelector('.average').textContent =
-  'Average: ' + Math.round(sum / values.length).toLocaleString('en-US');
+document.querySelector('span.average-population').textContent =
+  sum / values.length.toLocaleString('en-US');
