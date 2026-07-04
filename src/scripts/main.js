@@ -8,9 +8,10 @@ for (const item of pop) {
 }
 
 const sum = values.reduce((acc, item) => acc + item, 0);
+const avg = sum / values.length;
 
 document.body.querySelector('span.total-population').textContent =
   sum.toLocaleString('en-US');
 
 document.querySelector('span.average-population').textContent =
-  sum / values.length.toLocaleString('en-US');
+  Math.round(avg).toLocaleString('en-US');
